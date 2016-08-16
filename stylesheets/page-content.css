@@ -1,0 +1,15 @@
+.language-icon { height: 25px; }
+
+.project-thumbnail-container img { margin-top: 15px; padding-left: 15px !important; padding-right: 15px !important; }
+.project-thumbnail-container .caption { padding-bottom: 0; }
+.project-thumbnail-container .btn-primary { width: 100%; }
+
+.centered-light-heading { font-size: 16px; color: #aaa; text-align: center; margin: 5px 0 5px !important; }
+
+.download-button-small { margin: 0 6px; }
+
+.dark-bg { background-color: #1a1a1a; }
+
+.colored-section { padding-bottom: 10.5px; }
+
+.release-link-container { display: none; }

@@ -1,0 +1,326 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Libraries</title>
+    
+    <meta name="description" content="If you are looking to write a program that takes advantage of the EV3's motors, sensors, or other native devices, using a language binding is the way to go."/>
+    
+    <link rel="alternate" type="application/atom+xml" href="/ev3dev.github.io/news/atom.xml" title="Atom feed">
+    <link rel="icon" href="/ev3dev.github.io/favicon.ico" />
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/bootstrap.css">
+
+    <!-- X3D styles and scripts -->
+    <!-- x3dom.js is nearly 1 MB of data so we only include it if necessary  -->
+    
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/site-structure.css">
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/search.css">
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/landing-content.css">
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/page-content.css">
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/user-cards.css">
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/tabs.css">
+
+    <!-- Python code highlighting -->
+    <link rel="stylesheet" href="/ev3dev.github.io/stylesheets/pygments/monokai.css" />
+    
+    <!-- 3rd-party libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="/ev3dev.github.io/javascripts/bootstrap/bootstrap.min.js"></script>
+    <script src="/ev3dev.github.io/javascripts/jquery.getUrlParam.js"></script>
+    <script src="/ev3dev.github.io/javascripts/jquery.loadTemplate-1.4.4.min.js"></script>
+    <script src="/ev3dev.github.io/javascripts/respond.js"></script>
+    <script src="/ev3dev.github.io/javascripts/ua-parser.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    
+
+    <!-- Caches data from requests to API endpoints -->
+    <script src="/ev3dev.github.io/javascripts/api-cache.js"></script>
+    <!-- Loads user-cards from GH API -->
+    <script src="/ev3dev.github.io/javascripts/cards.js"></script>
+    <!-- Configures special anchors to link to the most recent ev3dev release -->
+    <script src="/ev3dev.github.io/javascripts/releases.js"></script>
+    <!-- Responds to queries typed into the "Quick nav" box -->
+    <script src="/ev3dev.github.io/javascripts/search.js"></script>
+    <!-- Converts static descriptors of tab target content into live text and links -->
+    <script src="/ev3dev.github.io/javascripts/tabs.js"></script>
+    <!-- Adds classes and other styles to pages where hard-coded css can't be used -->
+    <script src="/ev3dev.github.io/javascripts/style-helpers.js"></script>
+
+    <!-- Template for search results -->
+    <script type="text/html" id="search-result-template">
+        <div class="search-result">
+            <a data-href="href"><h4 data-content="title"></h4></a>
+            <span data-content="breadcrumbs" class="search-result-breadcrumbs"></span>
+            <span data-content="author" class="search-result-author"></span><br/>
+        </div>
+    </script>
+
+    
+
+</head>
+
+
+<body class="no-jumbotron ">
+
+    <div id="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/ev3dev.github.io/">
+                    <img id="brand-logo" src="/ev3dev.github.io/images/ev3dev_logo_white.png" alt="ev3dev logo" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="main-nav">
+                    <li>
+                        <a href="/ev3dev.github.io/" title="There's no place like Home...">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" title="Documentation on using ev3dev">
+                            Docs
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/ev3dev.github.io/docs/getting-started">Getting Started</a>
+                            </li>
+                            <li>
+                                <a href="/ev3dev.github.io/docs/tutorials">Tutorials</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/ev3dev.github.io/docs/motors">Motors</a>
+                            </li>
+                            <li>
+                                <a href="/ev3dev.github.io/docs/sensors">Sensors</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/ev3dev.github.io/docs">More...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/ev3dev.github.io/news" title="News about ev3dev">News</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Community
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/ev3dev.github.io/projects" title="Discover projects that use ev3dev">Projects</a>
+                            </li>
+                            <li>
+                                <a href="/ev3dev.github.io/share" title="Share projects that use ev3dev">Share</a>
+                            </li>
+                            <li>
+                                <a href="/ev3dev.github.io/contribute" title="How to contribute to ev3dev">Contribute</a>
+                            </li>
+                            <li>
+                                <a href="/ev3dev.github.io/support" title="Found a bug? Have a question?">Get Help</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ev3dev/ev3dev/releases" title="SD card image files">Download</a>
+                    </li>
+                </ul>
+                <!-- items below float right, so appear in reverse order -->
+                <div id="search-container">
+                    <form class="navbar-form navbar-right dropdown" onsubmit="return false;">
+                        <input type="text" id="search-input" class="form-control" placeholder="Quick nav" autocomplete="off" />
+                        <div class="dropdown-menu" id="search-dropdown">
+                            <div class="search-results-container" id="search-results-docs">
+                                <h2>In docs</h2>
+                                <div data-content="docs-results">
+                                    <div class="no-results-note">No results</div>
+                                </div>
+                            </div>
+
+                            <div class="search-results-container" id="search-results-projects">
+                                <h2>In projects</h2>
+                                <div data-content="project-results">
+                                    <div class="no-results-note">No results</div>
+                                </div>
+                            </div>
+
+                            <div class="search-results-container" id="search-results-news">
+                                <h2>In news</h2>
+                                <div data-content="news-results">
+                                    <div class="no-results-note">No results</div>
+                                </div>
+                            </div>
+
+                            <div class="search-results-container" id="search-results-misc">
+                                <h2>In other pages</h2>
+                                <div data-content="misc-results">
+                                    <div class="no-results-note">No results</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    
+    
+    <div class="container">
+        
+
+<div class="page-header">
+    <h1>
+        Libraries
+        <small>Pre-made language bindings that make accessing the EV3 device drivers easy</small>
+        
+            <a class="btn btn-primary pull-right" href="https://github.com/ev3dev/ev3dev.github.io/edit/master/docs/libraries.md">Edit on Github</a>
+        
+    </h1>
+</div>
+    </div>
+    
+    
+    <div class="container">
+    
+        
+
+<hr />
+<div class="nav-dropdown-arrow">
+    <div>
+        
+
+<ol class="breadcrumb" vocab="http://schema.org" typeof="BreadcrumbList">
+    
+    
+        
+        
+        
+        <li property="itemListElement" typeof="ListItem" class="">
+            <a href="/ev3dev.github.io/docs/" property="item" typeof="WebPage">
+                <span property="name">docs</span>
+            </a>
+            <meta property="position" content="1">
+        </li>
+        
+    
+        
+        
+        
+        <li property="itemListElement" typeof="ListItem" class="active">
+            <span href="/ev3dev.github.io/docs/" property="item" typeof="WebPage">
+                <span property="name">libraries</span>
+            </span>
+            <meta property="position" content="2">
+        </li>
+        
+    
+</ol>
+    </div>
+    
+</div>
+<hr />
+
+
+
+<ul id="markdown-toc">
+  <li><a href="#unified-libraries" id="markdown-toc-unified-libraries">Unified Libraries</a></li>
+  <li><a href="#programming-toolkit-for-ev3dev" id="markdown-toc-programming-toolkit-for-ev3dev">Programming toolkit for ev3dev</a></li>
+  <li><a href="#extra-languages" id="markdown-toc-extra-languages">Extra languages</a></li>
+</ul>
+
+<p>If you are looking to write a program that takes advantage of the EV3’s motors, sensors, or other native devices,
+using a language binding is the way to go.
+We have a repository of officially maintained language bindings, as well as many more that are maintained separately by contributors on GitHub.</p>
+
+<h2 id="unified-libraries">Unified Libraries</h2>
+
+<p>Our official “unified” <a href="http://github.com/ev3dev/ev3dev-lang">language binding repository</a>
+supports multiple implementations of the ev3dev API in a variety of languages.</p>
+
+<ul>
+  <li>Unified bindings:
+    <ul>
+      <li><a href="https://github.com/ddemidov/ev3dev-lang-cpp">C++</a></li>
+      <li><a href="https://github.com/wasabifan/ev3dev-lang-js">Node.js</a></li>
+      <li><a href="https://github.com/rhempel/ev3dev-lang-python">Python</a></li>
+      <li><a href="https://github.com/mob41/ev3dev-lang-java">Java</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="programming-toolkit-for-ev3dev">Programming toolkit for ev3dev</h2>
+
+<p>There is also a <a href="https://developer.gnome.org/glib/stable/index.html">GLib</a>/<a href="https://developer.gnome.org/gobject/stable/index.html">GObject</a> based <a href="https://github.com/ev3dev/ev3devKit">toolkit</a> that provides a number of
+programming interfaces for ev3dev, including user interface and device driver
+interface.  It is written in vala, but since it uses GObjects, it can be used
+with many <a href="https://wiki.gnome.org/Projects/GObjectIntrospection/Users">languages</a> via <a href="https://wiki.gnome.org/Projects/GObjectIntrospection">GObjectIntrospection</a>. The <a href="https://github.com/ev3dev/brickman">Brick Manager</a>
+for ev3dev is written using this library.</p>
+
+<h2 id="extra-languages">Extra languages</h2>
+<p>We also have many great contrubutors that are maintaining extra libraries for
+languages not included in our other repository.  Note that some of these
+libraries may be outdated due to the fast development pace of ev3dev.</p>
+
+<ul>
+  <li>Extra languages:
+    <ul>
+      <li><a href="https://github.com/ldmberman/GoEV3">Go</a> updated for ev3dev-jessie by @ldmberman, <a href="https://github.com/mattrajca/GoEV3">original</a> by @mattrajca</li>
+      <li><a href="https://github.com/ev3go/ev3dev">Go</a> closely following the ev3dev API specification by the @ev3go project.</li>
+      <li><a href="https://github.com/ev3dev-lang-java/ev3dev-lang-java">Java</a> an interface similar to that of LeJOS by @jabrena</li>
+      <li><a href="https://github.com/topikachu/python-ev3">Python</a> by @topikachu</li>
+      <li><a href="https://github.com/in4lio/ev3dev-c">C (with optional Perl, Python and Ruby bindings)</a> by @in4lio</li>
+      <li><a href="https://github.com/theZiz/ev3c">C</a> by @theZiz</li>
+      <li><a href="https://github.com/annapawlicka/clj-ev3dev">Clojure</a> by @annapawlicka</li>
+    </ul>
+  </li>
+</ul>
+
+    
+    </div>
+    
+    <div id="footer">
+
+        <div class="cclicense">
+    
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+                www.ev3dev.org (with the exception of the projects pages)
+            </span>
+            is licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" />
+            </a>.
+            <br />
+            You are free to copy the text and images, but please be courteous and acknowledge the source.
+    
+        </div>
+
+    <br />
+    <div class="container">
+        <span>
+            Project maintained by <a href="https://github.com/rhempel">Ralph Hempel</a>
+            and <a href="https://github.com/dlech">David Lechner</a>, with help from the community
+        </span>
+    </div>
+</div>
+
+</body>
+</html>
+

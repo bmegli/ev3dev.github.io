@@ -1,0 +1,840 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>ev3dev News Feed</title>
+  <link href=""/>
+  <link type="application/atom+xml" rel="self" href="/news/atom.xml"/>
+  <updated>Tue, 16 Aug 2016 23:11:10 +0200</updated>
+  <id>/news/atom.xml</id>
+  <author>
+    <name>The ev3dev team</name>
+  </author>
+
+  
+  
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/08/05/ev3dev-and-docker</id>
+    <link type="text/html" rel="alternate" href="/news/2016/08/05/ev3dev-and-docker/"/>
+    <title>Ev3dev and Docker</title>
+    <updated>Fri, 05 Aug 2016 00:00:00 +0200</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p class=&quot;image-responsive pull-right&quot;&gt;&lt;img src=&quot;/images/news/docker-logo.png&quot; alt=&quot;Docker logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We are developing &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; images for ev3dev. These can be used for a variety
+of things. In the near future will be using Docker images to create the SD card
+images that we distribute. This will make it easy to create custom versions of
+ev3dev, such as ev3dev+ROS.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;These images will also be replacing &lt;code class=&quot;highlighter-rouge&quot;&gt;brickstrap&lt;/code&gt; for cross-compiling. We have
+a new tutorial on &lt;a href=&quot;/docs/tutorials/using-docker-to-cross-compile&quot;&gt;cross-compiling with Docker&lt;/a&gt;. The best part about
+this is that you don’t need to install a full Ubuntu VM anymore
+to develop on Windows or Mac. And because we know what you are thinking… no,
+the Docker images do not emulate the EV3 hardware any way. Maybe someday.&lt;/p&gt;
+
+&lt;p&gt;So, pull some images, write some programs and let us know how it goes. We think
+you will have a whale of a good time.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/07/24/kernel-release-cycle-13</id>
+    <link type="text/html" rel="alternate" href="/news/2016/07/24/kernel-release-cycle-13/"/>
+    <title>Kernel Release Cycle 13</title>
+    <updated>Sun, 24 Jul 2016 00:00:00 +0200</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;In this round of releases, we have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.15-13-ev3dev-ev3&lt;/code&gt; for EV3.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.15-ti-rt-r37-13-ev3dev-bb.org&lt;/code&gt; for BeagleBone.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.15-13-ev3dev-rpi&lt;/code&gt; for Raspberry Pi 0/1.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.15-13-ev3dev-rpi2&lt;/code&gt; for Raspberry Pi 2/3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is mainly a bug fix release.&lt;/p&gt;
+
+&lt;p&gt;You can also find this kernel in our latest nightly build:&lt;/p&gt;
+
+&lt;p&gt;2016-08-13 update: Image build snapshots are now hosted &lt;a href=&quot;https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Got rtl8192cu Wi-Fi driver working again in EV3 kernel.&lt;/li&gt;
+  &lt;li&gt;Fixed some issues with PixyCam driver.&lt;/li&gt;
+  &lt;li&gt;Fixed some issues with ramping motors (thanks @rhempel)&lt;/li&gt;
+  &lt;li&gt;Fixed some issues with EV3/UART sensors.&lt;/li&gt;
+  &lt;li&gt;Fixed some issues with FatcatLab EVB sound and battery drivers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;breaking-changes&quot;&gt;Breaking Changes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Renamed Firgelli motor drivers. (The company has a new name - Actuonix)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;changelogs&quot;&gt;Changelogs&lt;/h3&gt;
+
+&lt;p&gt;For a more complete changelog, follow the link for your platform:
+&lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/e2e0ef9f8017bf920c754a4758d50f5ff887f81a/ev3dev-ev3/changelog&quot;&gt;EV3&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/6189b465330bc606adde1b75d8d6d1c05f3f284b/ev3dev-bb.org/changelog&quot;&gt;BB&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/0ce6bf7d79a97ed0da9f3ec1786009e594ee4c0e/ev3dev-rpi/changelog&quot;&gt;RPi&lt;/a&gt; or &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/94a52b32dcd2e5d57ad8385303a86ff59b76c7cf/ev3dev-rpi2/changelog&quot;&gt;RPi2&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/07/11/nightly-image-builds</id>
+    <link type="text/html" rel="alternate" href="/news/2016/07/11/nightly-image-builds/"/>
+    <title>Nightly Image Builds</title>
+    <updated>Mon, 11 Jul 2016 00:00:00 +0200</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;I have finally got around to something I should have a long time ago - automating
+the build process of creating ev3dev SD card images. Now we can create new image
+files for all platforms in around 30 minutes. The images are hosted on &lt;a href=&quot;https://bintray.com/&quot;&gt;bintray&lt;/a&gt;,
+which is one of the many awesome services that are free for open source projects
+like ev3dev.&lt;/p&gt;
+
+&lt;p&gt;We are calling these “nightly” images. The quotes mean that we won’t actually
+create new images every night, but just on demand whenever there are significant
+updates to packages.&lt;/p&gt;
+
+&lt;p&gt;These images are totally untested, so we could use a few folks to try them out
+and see if they actually work. &lt;s&gt;Click the nifty little badge below to find the
+downloads.&lt;/s&gt;&lt;/p&gt;
+
+&lt;p&gt;2016-08-13 update: Image build snapshots are now hosted &lt;a href=&quot;https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/06/14/Kernel-Release-Cycle-12</id>
+    <link type="text/html" rel="alternate" href="/news/2016/06/14/Kernel-Release-Cycle-12/"/>
+    <title>Kernel Release Cycle 12</title>
+    <updated>Tue, 14 Jun 2016 00:00:00 +0200</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;In this round of releases, we have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.13-12-ev3dev-ev3&lt;/code&gt; for EV3.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.12-ti-rt-r30-13-ev3dev-bb.org&lt;/code&gt; for BeagleBone.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.13-12-ev3dev-rpi&lt;/code&gt; for Raspberry Pi 0/1.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.13-12-ev3dev-rpi2&lt;/code&gt; for Raspberry Pi 2/3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You may notice on the EV3 that the boot logo looks a bit different. This is so
+that we can display kernel messages on boot to help troubleshoot some issues
+we have been having with the EV3 locking up on boot. Messages won’t actually
+be displayed until you upgrade the &lt;code class=&quot;highlighter-rouge&quot;&gt;flash-kernel&lt;/code&gt; package to &lt;code class=&quot;highlighter-rouge&quot;&gt;3.35ev3dev9&lt;/code&gt; and
+edit &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/default/flash-kernel&lt;/code&gt; to remove the &lt;code class=&quot;highlighter-rouge&quot;&gt;quiet&lt;/code&gt; option and run
+&lt;code class=&quot;highlighter-rouge&quot;&gt;flash-kernel&lt;/code&gt; and then reboot.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install flash-kernel
+sudo nano /etc/default/flash-kernel
+sudo flash-kernel
+sudo reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kernel package no longer recommends kernel-common - this should prevent
+questions about /etc/kernel-img.conf during upgrade&lt;/li&gt;
+  &lt;li&gt;Hopefully fixed Wi-Fi regression for devices that use the rtl8192 driver&lt;/li&gt;
+  &lt;li&gt;Fixed some issues with EV3 UART sensors - big shout-out to @bmegli for helping
+with this!&lt;/li&gt;
+  &lt;li&gt;Fixed the LEGO NXT Energy Storage driver - thanks @kortschak&lt;/li&gt;
+  &lt;li&gt;Got LEGO NXT Temperature sensor working using lego-sensor class - also thanks
+@kortschak&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;changelogs&quot;&gt;Changelogs&lt;/h3&gt;
+
+&lt;p&gt;For a more complete changelog, follow the link for your platform:
+&lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/55419257875ea7231be4e787f905837320959811/ev3dev-ev3/changelog&quot;&gt;EV3&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/9cf48a972aedb0296d1d2a11dadea03b5c8c8f4b/ev3dev-bb.org/changelog&quot;&gt;BB&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/5ae765684f6df4b1373b428a43075bda7d8705ee/ev3dev-rpi/changelog&quot;&gt;RPi&lt;/a&gt; or &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/5ae765684f6df4b1373b428a43075bda7d8705ee/ev3dev-rpi2/changelog&quot;&gt;RPi2&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/05/08/Kernel-Release-Cycle-11</id>
+    <link type="text/html" rel="alternate" href="/news/2016/05/08/Kernel-Release-Cycle-11/"/>
+    <title>Kernel Release Cycle 11</title>
+    <updated>Sun, 08 May 2016 00:00:00 +0200</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;In this round of releases, we have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.9-11-ev3dev-ev3&lt;/code&gt; for EV3.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.9-ti-rt-r25-11-ev3dev-bb.org&lt;/code&gt; for BeagleBone.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.9-11-ev3dev-rpi&lt;/code&gt; for Raspberry Pi 0/1.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.4.9-11-ev3dev-rpi2&lt;/code&gt; for Raspberry Pi 2/3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release has come a bit sooner than expected because of a few serious bugs
+in the release cycle 10 series.&lt;/p&gt;
+
+&lt;h3 id=&quot;major-kernel-version-update&quot;&gt;Major Kernel Version Update&lt;/h3&gt;
+
+&lt;p&gt;The big news is that all kernels are updated to v4.4.9. Both Raspberry Pi and
+BeagleBone upstream have switched to the 4.4 series as their stable kernel. Both
+were using a 4.1 kernel previously. So, since they got updated, we figured it
+was a good time to get the EV3 kernel updated as well. It was on a 3.16 kernel
+previously, so it is a much bigger upgrade. We’ve done our best to make sure we
+didn’t break anything, but be sure to let us know if anything that was working
+in a previous version is no longer working.&lt;/p&gt;
+
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tacho-motor run-direct command not working&lt;/li&gt;
+  &lt;li&gt;Kernel deadlock when booting with EV3/UART sensors plugged in&lt;/li&gt;
+  &lt;li&gt;EV3/UART sensor not working on input port 4 on BeagleBone/EVB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;new-driver&quot;&gt;New Driver&lt;/h3&gt;
+
+&lt;p&gt;We also sneaked in a new driver. Thanks to @kortschak for getting the mindsensors.com
+&lt;a href=&quot;/docs/sensors/mindsensors.com-digital-pneumatic-pressure-sensor&quot;&gt;pressure sensor&lt;/a&gt; working!&lt;/p&gt;
+
+&lt;h3 id=&quot;changelogs&quot;&gt;Changelogs&lt;/h3&gt;
+
+&lt;p&gt;For a more complete changelog, follow the link for your platform:
+&lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/df1fe763165d002b6eb6482148abb98fca9dcae6/ev3dev-ev3/changelog&quot;&gt;EV3&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/b912e043ad7c40df66b6007b56153c610e1f2896/ev3dev-bb.org/changelog&quot;&gt;BB&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/1833e9369be118ac3072a775504f2c2fa8958432/ev3dev-rpi/changelog&quot;&gt;RPi&lt;/a&gt; or &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/1833e9369be118ac3072a775504f2c2fa8958432/ev3dev-rpi2/changelog&quot;&gt;RPi2&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/04/11/Kernel-Release-Cycle-10</id>
+    <link type="text/html" rel="alternate" href="/news/2016/04/11/Kernel-Release-Cycle-10/"/>
+    <title>Kernel Release Cycle 10</title>
+    <updated>Mon, 11 Apr 2016 00:00:00 +0200</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;In this round of releases, we have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v3.16.7-ckt26-10-ev3dev-ev3&lt;/code&gt; for the EV3.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.1.18-ti-rt-r56-10-ev3dev-bb.org&lt;/code&gt; for the BeagleBone.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.1.21-10-ev3dev-rpi&lt;/code&gt; for the Raspberry Pi 0/1.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v4.1.21-10-ev3dev-rpi2&lt;/code&gt; for the Raspberry Pi 2/3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;rt&lt;/code&gt; in the BeagleBone kernel denotes that it is a &lt;a href=&quot;https://rt.wiki.kernel.org/index.php/Main_Page&quot;&gt;realtime kernel&lt;/a&gt;.
+BeagleBone has been shipping a realtime kernel for a few months now, so it will
+be interesting to see if we run into issues or if there is a noticeable difference
+in performance. Perhaps in the future we can get a realtime kernel running on
+the EV3 as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;breaking-changes&quot;&gt;Breaking Changes&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Motor Drivers!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There has been a major overhaul of the tacho-motor class. Most of the changes
+are under the hood, however there are a few important breaking changes that
+users need to know about.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;speed_regulation&lt;/code&gt; attribute is removed. Now, all &lt;code class=&quot;highlighter-rouge&quot;&gt;run-*&lt;/code&gt; commands except for
+&lt;code class=&quot;highlighter-rouge&quot;&gt;run-direct&lt;/code&gt; behave the same as the old &lt;code class=&quot;highlighter-rouge&quot;&gt;speed_regulation&lt;/code&gt; = &lt;code class=&quot;highlighter-rouge&quot;&gt;on&lt;/code&gt;. If you need
+unregulated control of motors (&lt;code class=&quot;highlighter-rouge&quot;&gt;speed_regulation&lt;/code&gt; = &lt;code class=&quot;highlighter-rouge&quot;&gt;off&lt;/code&gt;) use the &lt;code class=&quot;highlighter-rouge&quot;&gt;run-direct&lt;/code&gt;
+command.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;encoder_polarity&lt;/code&gt; attribute is removed. You probably were not using this
+unless you were using Firgelli linear actuators. More on these later…&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stop_command&lt;/code&gt; is renamed to &lt;code class=&quot;highlighter-rouge&quot;&gt;stop_action&lt;/code&gt;. Since we were making breaking
+changes, we decided to change this to make it clear that when you write to
+this attribute, the motor does not stop until you write &lt;code class=&quot;highlighter-rouge&quot;&gt;stop&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;command&lt;/code&gt;.
+&lt;strong&gt;Note:&lt;/strong&gt; This change also affects the dc-motor class.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;max_speed&lt;/code&gt; attribute is added. This returns the maximum speed of the motor
+ with no load at 9V.&lt;/li&gt;
+  &lt;li&gt;New &lt;code class=&quot;highlighter-rouge&quot;&gt;linear&lt;/code&gt; subclass for linear actuators.
+    &lt;ul&gt;
+      &lt;li&gt;This is for use with Firgelli linear actuators.&lt;/li&gt;
+      &lt;li&gt;These are not automatically detected. You have to specify the driver by
+using the &lt;code class=&quot;highlighter-rouge&quot;&gt;set_device&lt;/code&gt; attribute of the output port.&lt;/li&gt;
+      &lt;li&gt;The devices will show up as &lt;code class=&quot;highlighter-rouge&quot;&gt;/sys/class/tacho-motor/linearN&lt;/code&gt; instead of
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/sys/class/tacho-motor/motorN&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;These will not have the &lt;code class=&quot;highlighter-rouge&quot;&gt;count_per_rot&lt;/code&gt; attribute. Instead, they will have
+&lt;code class=&quot;highlighter-rouge&quot;&gt;count_per_m&lt;/code&gt; (tachometer counts per meter of linear travel) and 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;full_travel_count&lt;/code&gt; (tachometer counts for full travel of the actuator)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+
+&lt;p&gt;Thanks to some new contributors for the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;@harmooni fixed the HiTechnic Angle Sensor driver.&lt;/li&gt;
+  &lt;li&gt;@markosko fixed the HiTechic Compass Sensor driver.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also we backported a couple of mainline kernel patches to our EV3 kernel:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed some Sony Dualshock controllers not working.&lt;/li&gt;
+  &lt;li&gt;Fixed camera button on LEGO Vision Command cameras not working.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And last, but not least, BrickPi got some love:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motor control is greatly improved. You can now control motors very close to
+the same way you can on the EV3.&lt;/li&gt;
+  &lt;li&gt;Fixed inconsistent port addresses.&lt;/li&gt;
+  &lt;li&gt;Fixed a sensor connection bug.&lt;/li&gt;
+  &lt;li&gt;Fixed NXT/Analog sensors value not changing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;changelogs&quot;&gt;Changelogs&lt;/h3&gt;
+
+&lt;p&gt;For a more complete changelog, follow the link for your platform:
+&lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/ad411405b3bd9def95234c6ed3998d228aac6443/ev3dev-ev3/changelog&quot;&gt;EV3&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/ad411405b3bd9def95234c6ed3998d228aac6443/ev3dev-bb.org/changelog&quot;&gt;BB&lt;/a&gt;, &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/ad411405b3bd9def95234c6ed3998d228aac6443/ev3dev-rpi/changelog&quot;&gt;RPi&lt;/a&gt; or &lt;a href=&quot;https://github.com/ev3dev/ev3dev-kpkg/blob/ad411405b3bd9def95234c6ed3998d228aac6443/ev3dev-rpi2/changelog&quot;&gt;RPi2&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/03/11/Package-Archive-Moved</id>
+    <link type="text/html" rel="alternate" href="/news/2016/03/11/Package-Archive-Moved/"/>
+    <title>Package Archive Moved</title>
+    <updated>Fri, 11 Mar 2016 00:00:00 +0100</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;We have moved the ev3dev.org package archives around a bit. Everything now
+lives at &lt;a href=&quot;http://archive.ev3dev.org&quot;&gt;http://archive.ev3dev.org&lt;/a&gt;. I have setup redirects from the old
+location so that most people won’t need to do anything.&lt;/p&gt;
+
+&lt;p&gt;If you like things to be correct, you can edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/apt/sources.list&lt;/code&gt;
+file on your EV3.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://archive.ev3dev.org/debian jessie main
+#deb-src http://archive.ev3dev.org/debian jessie main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you are using any ev3dev.org desktop development tools, we now have a
+separate directory for Ubuntu packages. So, users of &lt;code class=&quot;highlighter-rouge&quot;&gt;brickstrap&lt;/code&gt;, etc.
+will need to update &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/apt/sources.list&lt;/code&gt; on their development machine.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://archive.ev3dev.org/ubuntu trusty main
+#deb-src http://archive.ev3dev.org/ubuntu trusty main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/02/07/evb-ev3dev-lang-java-release-0.2.0</id>
+    <link type="text/html" rel="alternate" href="/news/2016/02/07/evb-ev3dev-lang-java-release-0.2.0/"/>
+    <title>Announcing ev3dev-lang-java v0.2.0</title>
+    <updated>Sun, 07 Feb 2016 00:00:00 +0100</updated>
+    <author>
+      <name>@jabrena</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;If you like &lt;a href=&quot;https://www.linux.com/&quot;&gt;Linux&lt;/a&gt; features from ev3dev and you enjoy with &lt;a href=&quot;http://www.java.com/&quot;&gt;Java&lt;/a&gt;, this library is the solution to develop Java software for robots on ev3dev. &lt;a href=&quot;https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/&quot;&gt;ev3dev-lang-java&lt;/a&gt; is a Java library designed to interact with the hardware managed by ev3dev using the LeJOS way.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-features-are-included-in-last-release&quot;&gt;What features are included in last release?&lt;/h2&gt;
+
+&lt;p&gt;Current version includes these features:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Regulated Motor Support&lt;/li&gt;
+  &lt;li&gt;Unregulated Motor Support&lt;/li&gt;
+  &lt;li&gt;Sensor Support&lt;/li&gt;
+  &lt;li&gt;Sounds&lt;/li&gt;
+  &lt;li&gt;LeJOS Sensor filter Support&lt;/li&gt;
+  &lt;li&gt;eSpeak TTS (Text to speech) Support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to-extend-the-features-of-this-library&quot;&gt;How to extend the features of this library?&lt;/h2&gt;
+
+&lt;p&gt;If you have experience with Robotics, you could explore other possibilities as Computer Vision. In this case, &lt;a href=&quot;http://opencv.org/&quot;&gt;OpenCV&lt;/a&gt; has a Java port and the way to install is very easy on ev3dev:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install libopencv2.4-java&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Using ev3dev with Java, you have the opportunity to build on your Brick directly so you only have to install your favorite Java build system and test your software or the sofware of your friend in the same way that you do on your laptop.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install git
+git clone https://github.com/ev3dev-lang-java/ev3dev-lang-java.git
+sudo apt-get install gradle
+sudo apt-get install maven
+sudo apt-get install ant
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ev3dev-lang-java/library
+mvn package&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;One advantage of the usage of ev3dev with Java is the option to study some solution from another technology and later, try to port to Java. Ev3dev is polyglot, a common feature in nowdays.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-the-support-for-lego-mindstorms-boards&quot;&gt;What is the support for Lego Mindstorms boards?&lt;/h2&gt;
+
+&lt;p&gt;In this release, the library has implemented the support for the EV3 Brick and their sensors &amp;amp; actuators included in the following kits:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://education.lego.com/en-us/products/lego-mindstorms-education-ev3-core-set-/5003400&quot;&gt;45544 LEGO MINDSTORMS Education EV3 Core Set&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lego.com/en-us/mindstorms/products/31313-mindstorms-ev3&quot;&gt;31313 LEGO MINDSTORMS EV3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the next releases, the library will add support for &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt; boards as &lt;a href=&quot;http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit-raspberry-pi-brain-for-lego-robot&quot;&gt;Mindsensors PiStorms&lt;/a&gt; &amp;amp; &lt;a href=&quot;http://www.dexterindustries.com/brickpi/&quot;&gt;Dexter Industries BrickPi+&lt;/a&gt; in order to use the power of Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;Take a look the following table to observe the differences:&lt;/p&gt;
+
+&lt;table class=&quot;table table-striped table-bordered&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;EV3 Brick&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Raspberry Pi 1Model B&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Raspberry Pi 2Model B&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Main Processor:&lt;/td&gt;
+      &lt;td&gt;TI Sitara AM1808 (ARM926EJ-S core)&lt;/td&gt;
+      &lt;td&gt;Single-core ARM1176JZF-S&lt;/td&gt;
+      &lt;td&gt;Quad-coreARM Cortex-A7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Frequency:&lt;/td&gt;
+      &lt;td&gt;300 MHz&lt;/td&gt;
+      &lt;td&gt;700 MHz&lt;/td&gt;
+      &lt;td&gt;900 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Main Memory:&lt;/td&gt;
+      &lt;td&gt;64 MB RAM 16 MB Flashmicro SDHC Slot&lt;/td&gt;
+      &lt;td&gt;512 MB (shared with GPU)&lt;/td&gt;
+      &lt;td&gt;1 GB (shared with GPU)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;USB Ports:&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This numbers explains the reason to develop this library for ev3dev.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-kind-of-software-is-possible-to-use-with-this-library&quot;&gt;What kind of software is possible to use with this library?&lt;/h2&gt;
+
+&lt;p&gt;At the moment, the library will help you to learn coding with Java and experiment with basic robotics concepts. Try to run this example on your EV3 Brick:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ev3dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;examples&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;misc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ev3dev.hardware.Battery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ev3dev.hardware.port.MotorPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ev3dev.hardware.port.SensorPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ev3dev.hardware.motor.EV3LargeRegulatedMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ev3dev.hardware.sensor.ev3.EV3IRSensor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;lejos.robotics.SampleProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;lejos.utility.Delay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//java -cp ev3-lang-java-0.2-SNAPSHOT.jar ev3dev.examples.misc.BumperCar&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BumperCar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	
+    &lt;span class=&quot;c1&quot;&gt;//Robot Definition&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EV3LargeRegulatedMotor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EV3LargeRegulatedMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MotorPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EV3LargeRegulatedMotor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EV3LargeRegulatedMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MotorPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EV3IRSensor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ir1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EV3IRSensor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SensorPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;S1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//Configuration&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;motorSpeed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    	
+        &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SampleProvider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ir1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDistanceMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_threshold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        
+        &lt;span class=&quot;c1&quot;&gt;//Robot control loop&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iteration_threshold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iteration_threshold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        	&lt;span class=&quot;n&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+            &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sampleSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()];&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fetchSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_threshold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+            	&lt;span class=&quot;n&quot;&gt;backwardWithTurn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        	&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Iteration: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Battery: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Battery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getVoltage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Distance: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;motorSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;motorSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;backwardWithTurn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Delay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;msDelay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;backward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Delay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;msDelay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Explore &lt;a href=&quot;https://ev3dev-lang-java.github.io/ev3dev-lang-java/docs/api/&quot;&gt;JavaDocs&lt;/a&gt; from the project to learn how to use the library. In the future, I will add a tutorial to learn to use the library.&lt;/p&gt;
+
+&lt;h2 id=&quot;roadmap&quot;&gt;Roadmap&lt;/h2&gt;
+
+&lt;p&gt;The current roadmap for this project is:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ev3dev-lang-java/ev3dev-lang-java/milestones/0.3.0&quot;&gt;v0.3.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Migrate project to Gradle&lt;/li&gt;
+  &lt;li&gt;Install Java 8 on Lego Mindstorms EV3&lt;/li&gt;
+  &lt;li&gt;Add support for Mindsensors PiStorms&lt;/li&gt;
+  &lt;li&gt;Add support for RPLidar, 2D Lidar&lt;/li&gt;
+  &lt;li&gt;Add support for Mindsensors Absolute IMU&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;https://pbs.twimg.com/media/Cb6yExKWwAANKJ4.jpg&quot; alt=&quot;RPLidar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ev3dev-lang-java/ev3dev-lang-java/milestones/0.4.0&quot;&gt;v0.4.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add support for Dexter Industries BrickPi+&lt;/li&gt;
+  &lt;li&gt;Add support for Microinfinity XG1300L&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;support&quot;&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;If you have some doubt about this library, please create a issue:
+&lt;a href=&quot;https://github.com/ev3dev-lang-java/ev3dev-lang-java/issues&quot;&gt;https://github.com/ev3dev-lang-java/ev3dev-lang-java/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ev3dev-lang-java.github.io/ev3dev-lang-java/#/&quot;&gt;ev3dev-lang-java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.tiobe.com/index.php/tiobe_index&quot;&gt;Tiobe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://githut.info/&quot;&gt;Githut&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages&quot;&gt;IEEE Spectrum&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://redmonk.com/sogrady/category/programming-languages/&quot;&gt;Redmonk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Juan Antonio&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2016/01/25/evb-ev3dev-jessie-2016-01-25-release</id>
+    <link type="text/html" rel="alternate" href="/news/2016/01/25/evb-ev3dev-jessie-2016-01-25-release/"/>
+    <title>Announcing Support for FatcatLab&#39;s EVB</title>
+    <updated>Mon, 25 Jan 2016 00:00:00 +0100</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p class=&quot;lead&quot;&gt;Welcome to the family!&lt;/p&gt;
+
+&lt;p&gt;It’s another exciting milestone for ev3dev. Starting today, we now support
+ev3dev on BeagleBone with &lt;a href=&quot;http://fatcatlab.com/product/evb/&quot;&gt;FatcatLab’s EVB cape&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/evb/evb-being-hacked.jpg&quot; alt=&quot;EVB being hacked&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some things about the EVB you might like to know:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Should work with BeagleBone &lt;a href=&quot;http://beagleboard.org/bone&quot;&gt;White&lt;/a&gt;, &lt;a href=&quot;http://beagleboard.org/black&quot;&gt;Black&lt;/a&gt; and &lt;a href=&quot;http://beagleboard.org/green&quot;&gt;Green&lt;/a&gt;. Has only been tested
+on BeagleBone Black.&lt;/li&gt;
+  &lt;li&gt;Ev3dev must be installed on a microSD card. It cannot be installed to the
+on-board eMMC because the eMMC pins are used by the EVB cape for other things.&lt;/li&gt;
+  &lt;li&gt;Auto-detection of NXT sensors does not always work correctly. This is a
+hardware limitation (missing gpio on input port pin 2).&lt;/li&gt;
+  &lt;li&gt;No I2C sensor support. This is a software issue, so could be fixed some day.&lt;/li&gt;
+  &lt;li&gt;The holes in the clear plastic cover that comes with the EVB have LEGO
+compatible spacing but do not have a LEGO compatible diameter. In other
+words, technic pins don’t fit in the holes. Be prepared to get creative to
+physically attach it to your creation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ev3dev/ev3dev/releases/tag/evb-ev3dev-jessie-2016-01-25&quot;&gt;Download&lt;/a&gt; the SD card image, try it out and let us know how it goes.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <id>/news/2015/12/30/ev3dev-jessie-2015-12-30-release</id>
+    <link type="text/html" rel="alternate" href="/news/2015/12/30/ev3dev-jessie-2015-12-30-release/"/>
+    <title>Announcing ev3dev-jessie-12-30 Release</title>
+    <updated>Wed, 30 Dec 2015 00:00:00 +0100</updated>
+    <author>
+      <name>@dlech</name>
+      <uri>http://www.ev3dev.org/</uri>
+    </author>
+    <content type="html">&lt;p&gt;We have reached the &lt;a href=&quot;https://github.com/ev3dev/ev3dev/milestones/ev3dev-jessie%202015-Q4&quot;&gt;2015-Q4&lt;/a&gt; milestone (and just barely in time). There are
+significant changes in this release, so even if you are an experienced ev3dev
+user, read on…&lt;/p&gt;
+
+&lt;h3 id=&quot;reporting-issues&quot;&gt;Reporting Issues&lt;/h3&gt;
+
+&lt;p&gt;Since there are so many changes with this release, we expect there to be new
+issues. If you have trouble, check out the &lt;a href=&quot;/support/&quot;&gt;support&lt;/a&gt; page and let us know
+about it. Just a friendly reminder… Please don’t comment on a closed issue
+(unless you are asking to re-open the issue or confirming that it is indeed fixed).
+It’s always best to open a new issue. It also keeps @dlech happy and sane.&lt;/p&gt;
+
+&lt;h3 id=&quot;default-user&quot;&gt;Default User&lt;/h3&gt;
+
+&lt;p&gt;We are no longer using &lt;code class=&quot;highlighter-rouge&quot;&gt;root:r00tme&lt;/code&gt; as the default user:password. The new default
+user name is &lt;code class=&quot;highlighter-rouge&quot;&gt;robot&lt;/code&gt; and the password is &lt;code class=&quot;highlighter-rouge&quot;&gt;maker&lt;/code&gt;. Only files in &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/robot/&lt;/code&gt;
+will show up in the File Browser in the Brickman user interface.&lt;/p&gt;
+
+&lt;h3 id=&quot;file-permission-issues&quot;&gt;File Permission Issues&lt;/h3&gt;
+
+&lt;p&gt;We discovered that the method we were previously using to create image files
+was fundamentally flawed with regard to file permissions. Basically, every file
+on the image was owned by &lt;code class=&quot;highlighter-rouge&quot;&gt;root:root&lt;/code&gt; even if it was supposed to be owned by
+someone else. This caused problems with programs that relied on these file
+permissions.&lt;/p&gt;
+
+&lt;p&gt;This issue has been fixed, but unfortunately that means that if you are already
+using ev3dev, you need to re-flash your SD card in order to fix these issues.
+Don’t forget to backup any important files before you re-flash!&lt;/p&gt;
+
+&lt;h3 id=&quot;raspberry-pi&quot;&gt;Raspberry Pi&lt;/h3&gt;
+
+&lt;p&gt;This is the first release that supports mindsensors.com &lt;a href=&quot;http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit&quot;&gt;PiStorms&lt;/a&gt; out of the box.
+&lt;strong&gt;Note:&lt;/strong&gt; You will need a USB keyboard or (10-digit keypad with backspace) in
+order to use the Brickman user interface.&lt;/p&gt;
+
+&lt;p&gt;We’ve also added a driver for battery indication on BrickPi+.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-roberta-lab&quot;&gt;Open-Roberta Lab&lt;/h3&gt;
+
+&lt;p&gt;Thanks to the work of @ensonic, we now have support for &lt;a href=&quot;http://lab.open-roberta.org&quot;&gt;http://lab.open-roberta.org&lt;/a&gt;
+out-of-the-box. It is prevented from running by default, so you do have to start
+it manually…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl unmask openrobertalab.service
+sudo systemctl start openrobertalab.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After running the commands above, it will start automatically after a reboot.
+You can turn it back off by running…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl stop openrobertalab.service
+sudo systemctl mask openrobertalab.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;bigger-font&quot;&gt;Bigger Font&lt;/h3&gt;
+
+&lt;p&gt;One of the most noticeable changes is that we are using a bigger font in the
+Brickman user interface. This font looks big on the EV3 but is actually kind
+of small on the PiStorms.&lt;/p&gt;
+
+&lt;p&gt;Changing the font size broke lots of screens in Brickman. We have fixed most of
+them, but if you find something that doesn’t look right, let us know.&lt;/p&gt;
+
+&lt;h3 id=&quot;faster-swap&quot;&gt;Faster Swap&lt;/h3&gt;
+
+&lt;p&gt;Linux uses what is called a swapfile for virtual memory. This means when your
+computer (or EV3) starts to run out of RAM, it moves some of the information
+to the swapfile to free up some RAM.&lt;/p&gt;
+
+&lt;p&gt;Conventionally, the swapfile is a file or partition on your hard drive. Hard drives
+are much slower than RAM, so when you are using too much memory your computer
+starts running really slow because it is moving memory back and forth between
+the fast RAM and the slow hard drive.&lt;/p&gt;
+
+&lt;p&gt;With ev3dev, we are running on an SD card, which is even way slower than a hard
+drive. The EV3 also only has 64MB of RAM, so it can run out of RAM rather
+quickly. In the past, we have had the swapfile on the SD card in various forms,
+but this is not so good for two reasons. 1) It makes the EV3 super slow when
+memory is swapped and 2) it will wear out your SD card faster because of writing
+to it all of the time.&lt;/p&gt;
+
+&lt;p&gt;So, what can we do to make this better? In this release, we are using zram instead.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Zram&quot;&gt;Zram&lt;/a&gt; is a relatively new Linux kernel feature that stores information compressed
+in RAM. We use this to create a compressed RAM disk for the swapfile. This way
+when the memory starts getting full, it is compressed to free up space.&lt;/p&gt;
+
+&lt;p&gt;The processor has to do extra work to compress the information, so it still
+makes the EV3 run slower, but it is actually still faster than writing to the SD
+card. So, hopefully this release should run a little faster and your SD card will
+last a little longer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; ZRAM is currently only enabled on the EV3. The Raspberry Pi images
+do not have any swapfile enabled since they have plenty of RAM.&lt;/p&gt;
+
+&lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
+
+&lt;p&gt;So, you want to download this release? Of course you do! &lt;a href=&quot;https://github.com/ev3dev/ev3dev/releases/tag/ev3dev-jessie-2015-12-30&quot;&gt;Click here&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  
+  
+  
+  
+ 
+</feed>

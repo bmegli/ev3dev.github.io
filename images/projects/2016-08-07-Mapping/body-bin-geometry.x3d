@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <Scene DEF='scene'>
+    <Group>
+      <Group>
+        <Shape DEF='SP_0'>
+          <Appearance>
+            <Material diffuseColor='0.6 0.6 0.6' specularColor='0.6 0.6 0.6'/>
+          </Appearance>
+          <BinaryGeometry DEF='BG_0' vertexCount='119574' primType='"TRIANGLES"' position='-0.679771542549 0.159918427467 0.102228447795' size='2.28330492973 0.319836854935 0.20445689559' index='/images/projects/2016-08-07-Mapping/body-bin-geometry/BG_0_indexBinary.bin' coord='/images/projects/2016-08-07-Mapping/body-bin-geometry/BG_0_coordBinary.bin' normal='/images/projects/2016-08-07-Mapping/body-bin-geometry/BG_0_normalBinary.bin' color='/images/projects/2016-08-07-Mapping/body-bin-geometry/BG_0_colorBinary.bin'/>
+        </Shape>
+      </Group>
+    </Group>
+  </Scene>
+</X3D>
