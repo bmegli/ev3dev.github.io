@@ -30,9 +30,9 @@ First, here are the things you need before starting:
   * USB Ethernet (wired) dongle
   * Bluetooth
 
-  For RasberryPi you can use wired Ethernet connection first.
+  For Rasberry Pi, you can use a wired Ethernet connection first.
   With PiStorms the EV3 options will work too since you have a built-in screen to configure them on.
-  With BrickPi you can also setup other connection from the console using external screen and keyboard.
+  With BrickPi you can also setup other connections from the console using an external screen and keyboard.
 
 
 {% include icon.html type="warning" %}
